@@ -12,9 +12,4 @@ jobs:
         with:
           setupOnly: true
           vcpkgGitCommitId: HEAD
-      - shell: cmd
-        run: |
-          %VCPKG_ROOT%\vcpkg help help
-          vcpkg help help
-          echo %VCPKG_ROOT% >> GITHUB_PATH
-          vcpkg help help
+      - run: vcpkg help help
