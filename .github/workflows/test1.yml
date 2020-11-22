@@ -18,4 +18,5 @@ jobs:
       - run: |
           git clone https://github.com/mfichman/winbrew
           cd winbrew
+          pip install -e .
           python -m winbrew.execute install luajit
