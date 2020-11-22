@@ -11,4 +11,5 @@ jobs:
       - uses: lukka/run-vcpkg@v5
         with:
           setupOnly: true
+          vcpkgGitCommitId: HEAD
       - run: $env:VCPKG_ROOT\vcpkg
