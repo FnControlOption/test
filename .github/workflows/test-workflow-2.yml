@@ -1,0 +1,14 @@
+name: test workflow 2
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  test-job:
+    runs-on: windows-latest
+    steps:
+      - uses: lukka/run-vcpkg@v5
+        with:
+          setupOnly: true
+      - run: $env:VCPKG_ROOT\vcpkg
