@@ -12,7 +12,10 @@ jobs:
         with:
           setupOnly: true
           vcpkgGitCommitId: HEAD
-      - run: vcpkg export --zip --output=test zlib
+          vcpkgTriplet: x64-windows
+      - run: |
+          vcpkg install zlib
+          vcpkg export --zip --output=test zlib
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
